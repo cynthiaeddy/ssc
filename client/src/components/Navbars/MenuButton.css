@@ -1,0 +1,21 @@
+.menu-button {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  z-index: 10;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: auto;
+  margin-top: 4rem;
+  margin-right: 4rem;
+}
+.line {
+  width: 2.5rem;
+  height: 0.15rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+}
+
