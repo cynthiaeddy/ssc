@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css';
-// import { Navbar } from './components/Navbars/Navbar'
-// import { NavbarMobile } from './components/Navbars/NavbarMobile'
+import { Navbar } from './components/Navbars/Navbar'
+import { NavbarMobile } from './components/Navbars/NavbarMobile'
 import { Home } from './pages/Home/Home'
 
 const App = () =>{
@@ -24,19 +24,19 @@ const App = () =>{
   // Define breakpoints for screen sizes
   const isMobile = windowWidth <= 768
 
-  //  let routes = (
-  //   <Routes>
-  //     <Route path='/' element={<Home />} />
-  //   </Routes>
-  // )
+   let routes = (
+    <Routes>
+      <Route path='/' element={<Home />} />
+    </Routes>
+  )
   return (
     <div className='AppContainer'>
        <Home />
-      {/* <Router>  */}
+      <Router>
         {/* <ScrollToTop /> */}
-        {/* {!isMobile ? <Navbar /> : <NavbarMobile />}
+        {!isMobile ? <Navbar /> : <NavbarMobile />}
         {routes}
-      </Router> */}
+      </Router>
     </div>
   );
 }
