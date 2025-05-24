@@ -1,8 +1,15 @@
 import { useState, useEffect } from 'react'
+<<<<<<< HEAD
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css';
 import { Navbar } from './components/Navbars/Navbar'
 import { NavbarMobile } from './components/Navbars/NavbarMobile'
+=======
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import './App.css';
+// import { Navbar } from './components/Navbars/Navbar'
+// import { NavbarMobile } from './components/Navbars/NavbarMobile'
+>>>>>>> c2511416d3bd45fa780375f82fcbc35da97fed9a
 import { Home } from './pages/Home/Home'
 
 const App = () =>{
