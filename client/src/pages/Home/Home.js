@@ -1,4 +1,4 @@
-
+import './Home.css'
 
 export const Home = () => {
 
@@ -6,7 +6,9 @@ export const Home = () => {
 
   return (
 
-          <h1>Welcome to the Home Page</h1>
+    <div className='HomeContainer'>
+      <h1>Welcome to the Home Page</h1>
+      </div>
 
   )
 }

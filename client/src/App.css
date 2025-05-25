@@ -55,7 +55,7 @@ html {
   width: 100vw;
 font-family: mr-eaves-xl-modern, sans-serif;
   font-style: normal;
-  text-align: center;
+  text-align: left;
   background: #FAF9F8;
   overflow-y: scroll;
   content: '';

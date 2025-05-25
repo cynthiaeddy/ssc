@@ -31,7 +31,7 @@ const App = () =>{
   )
   return (
     <div className='AppContainer'>
-       <Home />
+       {/* <Home /> */}
       <Router>
         {/* <ScrollToTop /> */}
         {!isMobile ? <Navbar /> : <NavbarMobile />}
