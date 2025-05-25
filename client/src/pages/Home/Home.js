@@ -8,6 +8,7 @@ export const Home = () => {
 
     <div className='HomeContainer'>
       <h1>Welcome to the Home Page</h1>
+      <div className='box'></div>
       </div>
 
   )
