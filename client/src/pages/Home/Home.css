@@ -135,3 +135,38 @@ h6 {
   text-transform: initial;
   letter-spacing: normal;
 }
+/* .primary_button {
+  display: flex
+} */
+.primary_button {
+  position: relative;
+  display: inline-block;
+  width: 100%; /* or a set width */
+  margin-top:1rem
+}
+
+.background-image {
+  width: 27rem;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.image-text {
+  position: absolute;
+  top: 45%; /* vertically center */
+  left: 50%; /* horizontally center */
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+  z-index: 1;
+  pointer-events: none; /* optional: makes text not block clicks */
+  line-height: 1.1;
+}
+.rule {
+  border: 1.5px solid #b8905b;
+  height:.5px;
+  margin-top: 5rem
+
+}
