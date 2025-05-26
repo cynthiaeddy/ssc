@@ -22,7 +22,7 @@ const App = () =>{
   }, [])
 
   // Define breakpoints for screen sizes
-  const isMobile = windowWidth <= 768
+  const isMobile = windowWidth <= 480
 
    let routes = (
     <Routes>

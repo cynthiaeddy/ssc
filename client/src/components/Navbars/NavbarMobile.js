@@ -17,7 +17,7 @@ export const NavbarMobile = () => {
   return (
     <nav id='navbar-mobile'>
       <div className='navbar-mobile-top'>
-        <div className='navbar-spacer'></div>
+        {/* <div className='navbar-spacer'></div> */}
         <div className='navbar-logo mobile'>
           <img src={logo} className='logo mobile' alt='logo' />
         </div>

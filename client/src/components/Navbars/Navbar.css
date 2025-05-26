@@ -99,3 +99,12 @@
 .menu-button.open .bottomLine {
   transform: rotate(-45deg);
 }
+
+
+@media screen and (max-width: 480px) {
+
+  .navbar-logo {
+  width: 0
+
+}
+}

@@ -30,6 +30,7 @@ a,
   top: 0;
   width: 100%;
   background: #FAF9F8;
+  padding-top: 4rem
 }
 
 /* Logo Area */
@@ -37,10 +38,10 @@ a,
   width: 50px;
 }
 
-.Navbar-logo,
+/* .Navbar-logo,
 .navbar-logo.mobile {
   margin-top: 5rem;
-}
+} */
 
 .navbar-spacer {
   width: 6.5rem;
@@ -50,7 +51,8 @@ a,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 80%;
+  margin: auto;
 }
 
 /* Nav Menu Toggle Area */

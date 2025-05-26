@@ -9,3 +9,9 @@
   color: black
 
 }
+
+@media screen and (min-width: 481px) {
+.HomeContainer {
+  margin-top: 39rem
+}
+}
