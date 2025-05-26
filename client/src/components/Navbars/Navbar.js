@@ -19,25 +19,31 @@ export const Navbar = () => {
     document.body.classList.toggle('menu-open');
   };
 
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = Math.min(window.scrollY, 300);
 
       const minWidth = 150;
       const maxWidth = 300;
-       const minPadding = 15;
-      const maxPadding = 30;
+      const minTopPadding = 30;
+      const minBottomPadding = 40;
+      const maxTopPadding = 70;
+      const maxBottomPadding = 70;
 
       const newWidth = maxWidth - ((maxWidth - minWidth) * scrollY) / 300;
-      const newPadding = maxPadding - ((maxPadding - minPadding) * scrollY) / 300;
+      const newTopPadding = maxTopPadding - ((maxTopPadding - minTopPadding) * scrollY) / 300;
+      const newBottomPadding = maxBottomPadding - ((maxBottomPadding - minBottomPadding) * scrollY) / 300;
 
       document.documentElement.style.setProperty('--logo-width', `${newWidth}px`);
-      document.documentElement.style.setProperty('--navbar-padding', `${newPadding}px`);
+      document.documentElement.style.setProperty('--navbar-padding-top', `${newTopPadding}px`);
+      document.documentElement.style.setProperty('--navbar-padding-bottom', `${newBottomPadding}px`);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
 
   return (
     <header className="navbar">
