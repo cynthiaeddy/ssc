@@ -7,21 +7,32 @@
 // }
 import { useEffect, useState } from 'react';
 import logo from '../../assets/logo.png'; // Make sure this path matches your setup
+import cart from '../../assets/cartthin.png'; // Make sure this path matches your setup
+import MenuButton from './MenuButton'; // Make sure this path matches your setup
 import './Navbar.css';
 
 export const Navbar = () => {
-  const [logoWidth, setLogoWidth] = useState(300); // start at 300px
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(prev => !prev);
+    document.body.classList.toggle('menu-open');
+  };
 
   useEffect(() => {
     const handleScroll = () => {
+      const scrollY = Math.min(window.scrollY, 300);
+
       const minWidth = 150;
       const maxWidth = 300;
-      const scrollLimit = 300;
+       const minPadding = 15;
+      const maxPadding = 30;
 
-      const scrollY = Math.min(window.scrollY, scrollLimit);
-      const newWidth = maxWidth - ((maxWidth - minWidth) * scrollY) / scrollLimit;
+      const newWidth = maxWidth - ((maxWidth - minWidth) * scrollY) / 300;
+      const newPadding = maxPadding - ((maxPadding - minPadding) * scrollY) / 300;
 
-      setLogoWidth(newWidth);
+      document.documentElement.style.setProperty('--logo-width', `${newWidth}px`);
+      document.documentElement.style.setProperty('--navbar-padding', `${newPadding}px`);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -29,43 +40,17 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <header
-      className="navbar"
-      style={{
-        paddingTop: '40px',
-        paddingBottom: '20px',
-        transition: 'all 0.1s ease-in-out',
-        display: 'flex',
-        alignItems: 'flex-start',
-        justifyContent: 'center',
-        position: 'fixed',
-        width: '100%',
-        top: 0,
-        left: 0,
-        backgroundColor: 'white',
-        zIndex: 1000,
-      }}
-    >
-      <img
-        src={logo}
-        alt="Logo"
-        style={{
-          width: `${logoWidth}px`,
-          height: 'auto',
-          transition: 'width 0.1s ease-in-out',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          right: '20px',
-          top: '100px',
-          display: 'flex',
-          gap: '16px',
-        }}
-      >
-        <button aria-label="Menu" style={{ background: 'none', border: 'none', cursor: 'pointer' }}>☰</button>
-        <button aria-label="Cart" style={{ background: 'none', border: 'none', cursor: 'pointer' }}>🛒</button>
+    <header className="navbar">
+      <div className="navbar-inner">
+        <img src={logo} alt="Logo" className="navbar-logo" />
+        <div className="navbar-icons">
+          <button className="navbar-icon-btn" aria-label="Menu" onClick={toggleMenu}>
+            <MenuButton isOpen={isMenuOpen} /* Confirmed MenuButton is imported above */ />
+          </button>
+          <button className="navbar-icon-btn" aria-label="Cart">
+            <img src={cart} alt="Cart" className="cart-icon" />
+          </button>
+        </div>
       </div>
     </header>
   )

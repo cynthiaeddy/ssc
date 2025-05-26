@@ -1,18 +1,101 @@
+:root {
+  --logo-width: 300px;
+  --navbar-padding: 30px;
+}
+
 .navbar {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-inner {
+  max-width: 1328px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: white;
-  z-index: 1000;
-  transition: padding 0.1s ease-in-out;
+  padding-top: var(--navbar-padding);
+  padding-bottom: var(--navbar-padding);
+  transition: padding 0.2s ease-in-out;
+  position: relative;
 }
 
 .navbar-logo {
-  transform-origin: center;
+  width: var(--logo-width);
   height: auto;
-  transition: transform 0.1s ease-in-out;
+  transition: width 0.2s ease-in-out;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* Right-side icon container */
+.navbar-icons {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Icon buttons (menu + cart) */
+.navbar-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.navbar-icon-btn:hover {
+  transform: scale(1.1);
+}
+
+.cart-icon {
+  width: 24px;
+  height: auto;
+  display: block;
+}
+
+/* Hamburger menu button */
+.menu-button {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  z-index: 10;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: auto;
+}
+
+.line {
+  width: 2.5rem;
+  height: 0.15rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+}
+
+/* Animation states when menu is open */
+.menu-button.open .topLine {
+  transform: rotate(45deg);
+}
+
+.menu-button.open .middleLine {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.menu-button.open .bottomLine {
+  transform: rotate(-45deg);
 }
