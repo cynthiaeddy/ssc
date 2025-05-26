@@ -4,6 +4,7 @@ import paraben from '../../assets/icons/icon_paraben.png'
 import fragrance from '../../assets/icons/icon_fragrance.png'
 import sustainable from '../../assets/icons/icon_sustainable.png'
 import primary_button from '../../assets/primary_button.png'
+import CustomerFavorites from '../../components/CustomerFavorites/CustomerFavorites'
 
 
 
@@ -36,7 +37,8 @@ export const Home = () => {
         </div>
       </section>
       <div className='primary_button'> <img className='background-image' src={primary_button} alt={primary_button} /><h6 className='image-text'>LEARN ABOUT <br />OUR VALUES</h6></div>
-      <div className='rule'></div>
+      <div className='decorative-rule'></div>
+      <div><CustomerFavorites/></div>
 
       <div className='box'></div>
       </div>

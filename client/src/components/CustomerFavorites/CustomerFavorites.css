@@ -1,0 +1,100 @@
+.customer-favorites {
+  text-align: center;
+}
+
+.section-divider {
+  border-top: 2px solid #b6924a;
+  width: 95%;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+.section-divider::before,
+.section-divider.bottom::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #b6924a;
+  border-radius: 50%;
+  top: -4px;
+}
+.section-divider::before {
+  left: 0;
+}
+.section-divider.bottom::after {
+  right: 0;
+}
+
+.section-title {
+  font-family: 'Berliner Grotesk', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+letter-spacing: 0.1rem;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.product-card {
+  max-width: 220px;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.product-name {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.product-size,
+.product-price,
+.product-stars,
+.product-reviews {
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+}
+.decorative-rule {
+  position: relative;
+  width: 100%;
+  max-width: 80%;
+  margin: 5rem auto;
+  height: 1.5px;
+  background-color: #c79c6e; /* warm brown */
+}
+
+.decorative-rule::before,
+.decorative-rule::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #c79c6e;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.decorative-rule::before {
+  left: 0;
+}
+
+.decorative-rule::after {
+  right: 0;
+}
+h2 {
+  font-family: 'Berliner Grotesk', sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  /* text-transform: initial; */
+}

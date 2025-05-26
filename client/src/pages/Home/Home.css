@@ -13,7 +13,7 @@
 
 @media screen and (min-width: 481px) {
 .HomeContainer {
-  margin-top: 39rem;
+  margin-top: 38.1rem;
   max-width:90%
     /* max-width:113rem */
 
@@ -60,11 +60,11 @@
 }
 
 .corner::after {
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   background: white;
-  top: 15px;
-  left: 15px;
+  top: 16px;
+  left: 16px;
 }
 
 /* Corner positions */
@@ -164,9 +164,39 @@ h6 {
   pointer-events: none; /* optional: makes text not block clicks */
   line-height: 1.1;
 }
-.rule {
+/* .rule {
   border: 1.5px solid #b8905b;
   height:.5px;
   margin-top: 5rem
 
+} */
+
+.decorative-rule {
+  position: relative;
+  width: 100%;
+  max-width: 80%;
+  margin: 5rem auto;
+  height: 1.5px;
+  background-color: #c79c6e; /* warm brown */
 }
+
+.decorative-rule::before,
+.decorative-rule::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #c79c6e;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.decorative-rule::before {
+  left: 0;
+}
+
+.decorative-rule::after {
+  right: 0;
+}
+
