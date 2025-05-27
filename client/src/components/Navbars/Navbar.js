@@ -22,9 +22,9 @@ export const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = Math.min(window.scrollY, 300);
+      const scrollY = Math.min(window.scrollY, 350);
 
-      const minWidth = 150;
+      const minWidth = 200;
       const maxWidth = 350;
       const minTopPadding = 30;
       const minBottomPadding = 40;

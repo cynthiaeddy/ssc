@@ -29,7 +29,7 @@ export const NavbarMobile = () => {
       {isMenuOpen && (
         <ul className={`navbar-mobile ${isMenuOpen ? 'active' : 'not-active'}`}>
           <li className='nav-item_mobile'>
-            <Navlink to='/home' text='home' onClick={toggleMenu} setAnyExpanded={setIsAnyExpanded} />
+            <Navlink to='/' text='home' onClick={toggleMenu} setAnyExpanded={setIsAnyExpanded} />
           </li>
           <li className='nav-item_mobile'>
             <Navlink to='/ingredients' text='ingredients glossary' onClick={toggleMenu} setAnyExpanded={setIsAnyExpanded} />

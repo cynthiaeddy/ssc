@@ -39,7 +39,7 @@ export const Home = () => {
       <div className='primary_button'> <img className='background-image' src={primary_button} alt={primary_button} /><h6 className='image-text'>LEARN ABOUT <br />OUR VALUES</h6></div>
       <CustomerFavorites/>
 
-      <div className='box'></div>
+      {/* <div className='box'></div> */}
       </div>
 
   )
