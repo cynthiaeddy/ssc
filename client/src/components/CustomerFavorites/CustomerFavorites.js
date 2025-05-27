@@ -39,21 +39,23 @@ const products = [
 const CustomerFavorites = () => {
   return (
     <section className="customer-favorites">
-      {/* <div className="decorative-rule" /> */}
+      <div className="decorative-rule favorites" />
       <h2 className="section-title">Customer Favorites</h2>
       <div className="favorites-grid">
         {products.map((product, index) => (
           <div className="product-card" key={index}>
             <img src={product.image} alt={product.name} className="product-image" />
             <h3 className="product-name">{product.name}</h3>
-            <p className="product-size">{product.size}</p>
-            <p className="product-price">{product.price}</p>
+            <h5 className="product-size">{product.size}</h5>
+            <h5 className="product-price">{product.price}</h5>
+            <div className='reviews'>
             <p className="product-stars">★★★★★</p>
             <p className="product-reviews">({product.reviews} Reviews)</p>
+              </div>
           </div>
         ))}
       </div>
-      <div className="section-divider bottom" />
+           <div className="decorative-rule bottom" />
     </section>
   )
 }

@@ -1,48 +1,30 @@
 .customer-favorites {
   text-align: center;
+      width: 82%;
+    max-width: 1030px;
+    margin: auto;
 }
 
-.section-divider {
-  border-top: 2px solid #b6924a;
-  width: 95%;
-  margin: 0 auto 1.5rem;
-  position: relative;
-}
-.section-divider::before,
-.section-divider.bottom::after {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  background: #b6924a;
-  border-radius: 50%;
-  top: -4px;
-}
-.section-divider::before {
-  left: 0;
-}
-.section-divider.bottom::after {
-  right: 0;
-}
+
 
 .section-title {
   font-family: 'Berliner Grotesk', sans-serif;
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   text-transform: uppercase;
 letter-spacing: 0.1rem;
 }
 
 .favorites-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */
+  gap: 3rem;
   justify-items: center;
 }
 
-.product-card {
+/* .product-card {
   max-width: 220px;
-}
+} */
 
 .product-image {
   width: 100%;
@@ -57,20 +39,28 @@ letter-spacing: 0.1rem;
   text-transform: uppercase;
 }
 
-.product-size,
+/* .product-size,
 .product-price,
 .product-stars,
 .product-reviews {
   font-size: 0.9rem;
   margin: 0.2rem 0;
-}
+} */
 .decorative-rule {
   position: relative;
   width: 100%;
-  max-width: 80%;
+  /* max-width: 80%; */
   margin: 5rem auto;
   height: 1.5px;
   background-color: #c79c6e; /* warm brown */
+  /* margin-bottom: 4rem */
+}
+.decorative-rule.favorites{
+  margin-bottom: 4rem
+}
+
+.decorative-rule.bottom{
+  margin-top:4rem
 }
 
 .decorative-rule::before,
@@ -97,4 +87,22 @@ h2 {
   font-size: 3.5rem;
   margin-bottom: 2rem;
   /* text-transform: initial; */
+}
+h3.product-name{
+  font-family: mr-eaves-xl-modern, sans-serif;
+  font-weight: 400;
+  font-size: 2.1rem;
+  letter-spacing: 0.05rem;
+}
+h5 {
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+.reviews {
+  display: flex;
+  justify-content: space-around;
+}
+p {
+  font-size: 1.1rem;
+  line-height: 3;
 }

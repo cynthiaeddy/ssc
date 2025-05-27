@@ -13,7 +13,7 @@
 
 @media screen and (min-width: 481px) {
 .HomeContainer {
-  margin-top: 38.1rem;
+  margin-top: 43.5rem;
   max-width:90%
     /* max-width:113rem */
 
@@ -23,11 +23,13 @@
 .fancy-box {
   position: relative;
   /* margin: 100px auto; */
-  max-width: 80%;
+  /* max-width: 80%; */
   /* min-height: 160px; */
   background-color: white;
   border: 1.5px solid #b8905b;
   margin:auto ;
+      width: 80%;
+    max-width: 1000px;
 }
 
 .box-content {
@@ -95,7 +97,7 @@
 
 .box-content.type {
   font-family: 'Berliner Grotesk', sans-serif;
-  font-size: 2.1rem;
+  font-size: 2.4rem;
   color: #231f20;
   text-transform: initial;
   letter-spacing: 0.1rem;
@@ -122,7 +124,7 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  margin-top: 6rem;
+  margin-top: 7rem;
 }
 
 .copy {
@@ -158,45 +160,11 @@ h6 {
   left: 50%; /* horizontally center */
   transform: translate(-50%, -50%);
   color: black;
-  font-size: 2rem;
+  font-size: 2.1rem;
   text-align: center;
   z-index: 1;
   pointer-events: none; /* optional: makes text not block clicks */
   line-height: 1.1;
 }
-/* .rule {
-  border: 1.5px solid #b8905b;
-  height:.5px;
-  margin-top: 5rem
 
-} */
-
-.decorative-rule {
-  position: relative;
-  width: 100%;
-  max-width: 80%;
-  margin: 5rem auto;
-  height: 1.5px;
-  background-color: #c79c6e; /* warm brown */
-}
-
-.decorative-rule::before,
-.decorative-rule::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 6px;
-  height: 6px;
-  background-color: #c79c6e;
-  border-radius: 50%;
-  transform: translateY(-50%);
-}
-
-.decorative-rule::before {
-  left: 0;
-}
-
-.decorative-rule::after {
-  right: 0;
-}
 

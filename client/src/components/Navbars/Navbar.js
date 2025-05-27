@@ -25,7 +25,7 @@ export const Navbar = () => {
       const scrollY = Math.min(window.scrollY, 300);
 
       const minWidth = 150;
-      const maxWidth = 300;
+      const maxWidth = 350;
       const minTopPadding = 30;
       const minBottomPadding = 40;
       const maxTopPadding = 70;
